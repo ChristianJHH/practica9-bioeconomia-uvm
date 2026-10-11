@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica #9: Políticas de Bioeconomía en América Latina | UVM - Christian Johan Hernández Hernández</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-950 text-slate-900 min-h-screen flex flex-col items-center justify-start p-2 sm:p-6">
+
+  <!-- ======================================================== -->
+  <!-- BARRA SUPERIOR INSTITUCIONAL (UVM & DATOS DE ENTREGA)    -->
+  <!-- ======================================================== -->
+  <header class="w-full max-w-[1560px] mb-3 flex flex-wrap items-center justify-between gap-2.5 no-print">
+    
+    <!-- Identidad UVM y Práctica -->
+    <div class="flex items-center space-x-3">
+      <div class="flex items-center justify-center bg-red-700 text-white font-extrabold text-sm px-2.5 py-1 rounded shadow tracking-wider">
+        UVM
+      </div>
+      <div>
+        <div class="flex items-center space-x-2">
+          <span class="text-[10px] uppercase tracking-widest font-extrabold text-red-400 bg-red-950/80 border border-red-800/60 px-2 py-0.5 rounded">
+            PRÁCTICA #9 • MOMENTO 1
+          </span>
+          <span class="text-xs text-slate-400 font-medium">Desarrollo Sostenible & Biotecnología</span>
+        </div>
+        <h1 class="text-xs sm:text-sm font-bold text-white tracking-tight">
+          Collage Digital: Políticas de Bioeconomía en América Latina
+        </h1>
+      </div>
+    </div>
+
+    <!-- Alumno & Acciones -->
+    <div class="flex items-center space-x-2 sm:space-x-3">
+      
+      <div class="hidden md:flex items-center space-x-2 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-xs text-slate-300">
+        <span class="text-slate-500">Estudiante:</span>
+        <span class="font-bold text-white">Christian Johan Hernández Hernández</span>
+        <span class="text-slate-600">|</span>
+        <span class="text-slate-400">Entrega Individual</span>
+      </div>
+
+      <button onclick="exportPDF()" class="inline-flex items-center px-3.5 py-1.5 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-lg shadow-sm transition">
+        <svg class="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+        Guardar PDF (16:9)
+      </button>
+
+      <button onclick="openSourcesModal()" class="inline-flex items-center px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-xs rounded-lg transition">
+        📚 Fuentes APA 7
+      </button>
+
+      <button onclick="toggleFullscreen()" class="hidden sm:inline-flex items-center px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 text-xs rounded-lg transition" title="Pantalla Completa">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- LIENZO PRINCIPAL: DIAPOSITIVA OFICIAL 16:9               -->
+  <!-- ======================================================== -->
+  <main class="slide-canvas p-4 sm:p-5">
+    
+    <!-- ENCABEZADO DE LA DIAPOSITIVA -->
+    <div class="border-b-2 border-slate-200 pb-2.5 mb-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+      <div>
+        <div class="flex items-center space-x-2">
+          <span class="bg-red-700 text-white font-black text-[10px] px-2 py-0.5 rounded tracking-wider">UVM</span>
+          <span class="text-xs font-bold text-red-700 uppercase tracking-widest">Práctica #9 • Momento 1: Collage Digital</span>
+        </div>
+        <h2 class="text-lg sm:text-2xl font-black text-slate-900 tracking-tight leading-tight mt-0.5">
+          POLÍTICAS DE BIOECONOMÍA EN AMÉRICA LATINA
+        </h2>
+        <p class="text-[11px] sm:text-xs text-slate-600">
+          Transformación de recursos biológicos, biorrefinerías circulares, innovación y sostenibilidad en <strong>Costa Rica 🇨🇷, Brasil 🇧🇷 y Colombia 🇨🇴</strong>.
+        </p>
+      </div>
+
+      <div class="text-right text-xs text-slate-500 hidden sm:block">
+        <div class="font-bold text-slate-800">Formato Diapositiva 16:9</div>
+        <div class="text-[11px] text-slate-600 font-semibold">Christian Johan Hernández Hernández</div>
+      </div>
+    </div>
+
+    <!-- GRID DE 3 SECCIONES (1 POR PAÍS DE AMÉRICA LATINA) -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-3.5 flex-1">
+
+      <!-- ============================================== -->
+      <!-- PAÍS 1: COSTA RICA 🇨🇷                          -->
+      <!-- ============================================== -->
+      <section class="country-column p-3.5 border-t-4 border-t-sky-600">
+        <div>
+          <!-- Cabecera de País -->
+          <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-150">
+            <div class="flex items-center space-x-2">
+              <span class="text-2xl">🇨🇷</span>
+              <div>
+                <h3 class="text-sm font-black text-slate-900 uppercase tracking-wider">COSTA RICA</h3>
+                <span class="key-pill bg-sky-100 text-sky-800">Descarbonización 2050</span>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Pionero 2020</span>
+          </div>
+
+          <!-- 1. Política / Estrategia -->
+          <div class="info-subcard">
+            <span class="text-[9.5px] font-extrabold text-sky-700 uppercase tracking-wider block">
+              1. POLÍTICA DE BIOECONOMÍA
+            </span>
+            <p class="text-xs font-bold text-slate-900">Estrategia Nacional de Bioeconomía 2020-2030</p>
+            <p class="text-[11px] text-slate-600">Decreto Ejecutivo N° 42475 (MICITT, MAG, MINAE y MEIC).</p>
+          </div>
+
+          <!-- 2. Recurso Biológico -->
+          <div class="info-subcard">
+            <span class="text-[9.5px] font-extrabold text-emerald-700 uppercase tracking-wider block">
+              2. RECURSO BIOLÓGICO UTILIZADO
+            </span>
+            <p class="text-xs font-bold text-slate-900">Biomasa residual de rastrojo de piña y broza de café</p>
+            <p class="text-[11px] text-slate-600">Fibras lignocelulósicas agrícolas y cultivos de microalgas.</p>
+          </div>
+
+          <!-- 3. Producto o Beneficio -->
+          <div class="info-subcard">
+            <span class="text-[9.5px] font-extrabold text-amber-700 uppercase tracking-wider block">
+              3. PRODUCTO / BENEFICIO OBTENIDO
+            </span>
+            <p class="text-xs font-bold text-slate-900">Bioplásticos compostables y biofertilizantes orgánicos</p>
+            <p class="text-[11px] text-slate-600">Aprovechamiento integral de pasivos agrícolas y bioinsumos.</p>
+          </div>
+
+          <!-- 4. Sector de Aplicación -->
+          <div class="info-subcard">
+            <span class="text-[9.5px] font-extrabold text-indigo-700 uppercase tracking-wider block">
+              4. SECTOR DONDE SE APLICA
+            </span>
+            <p class="text-xs font-bold text-slate-900">Agroindustria circular, Biorrefinerías y Biomateriales</p>
+            <p class="text-[11px] text-slate-600">Sustitución progresiva de resinas fósiles de empaque.</p>
+          </div>
+
+          <!-- 5. Relación con la Sostenibilidad -->
+          <div class="info-subcard bg-emerald-50/60 border-emerald-100">
+            <span class="text-[9.5px] font-extrabold text-emerald-800 uppercase tracking-wider block">
+              5. RELACIÓN CON LA SOSTENIBILIDAD
+            </span>
+            <p class="text-[11px] text-slate-700 leading-snug">
+              Pilar del <strong>Plan Nacional de Descarbonización 2050</strong>. Mitiga la plaga de mosca de establo derivada de la quema/descomposición del rastrojo e impulsa un modelo <strong>zero-waste</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- 6. Dos Imágenes con Fuentes y Enlaces Directos -->
+        <div class="pt-2 border-t border-slate-200 space-y-2">
+          <span class="text-[9.5px] font-bold text-slate-500 uppercase tracking-wider block">
+            EVIDENCIAS VISUALES (CLIC PARA AMPLIAR)
+          </span>
+
+          <div class="grid grid-cols-2 gap-2">
+            <!-- Img 1 -->
+            <div class="photo-frame group cursor-pointer" onclick="openLightbox('cr_pineapple')">
+              <img src="assets/cr_pineapple.jpg" alt="Rastrojo de piña Costa Rica">
+              <div class="p-1 bg-white text-[9px] leading-tight">
+                <span class="font-bold text-slate-900 block truncate">Biomasa piñera</span>
+                <span class="text-slate-500 block truncate">LANOTEC - CeNAT</span>
+                <a href="https://cenat.ac.cr/lanotec/" target="_blank" onclick="event.stopPropagation()" class="text-blue-600 underline font-medium block truncate hover:text-blue-800">
+                  🔗 cenat.ac.cr
+                </a>
+              </div>
+            </div>
+
+            <!-- Img 2 -->
+            <div class="photo-frame group cursor-pointer" onclick="openLightbox('cr_bioplastic')">
+              <img src="assets/cr_bioplastic.jpg" alt="Bioplásticos Costa Rica">
+              <div class="p-1 bg-white text-[9px] leading-tight">
+                <span class="font-bold text-slate-900 block truncate">Biopolímeros</span>
+                <span class="text-slate-500 block truncate">IICA Observatorio</span>
+                <a href="https://www.iica.int/es/prensa/noticias/bioeconomia-costa-rica" target="_blank" onclick="event.stopPropagation()" class="text-blue-600 underline font-medium block truncate hover:text-blue-800">
+                  🔗 iica.int
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- PAÍS 2: BRASIL 🇧🇷                              -->
+      <!-- ============================================== -->
+      <section class="country-column p-3.5 border-t-4 border-t-emerald-600">
+        <div>
+          <!-- Cabecera de País -->
+          <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-150">
+            <div class="flex items-center space-x-2">
+              <span class="text-2xl">🇧🇷</span>
+              <div>
+                <h3 class="text-sm font-black text-slate-900 uppercase tracking-wider">BRASIL</h3>
+                <span class="key-pill bg-emerald-100 text-emerald-800">Biocombustibles Global</span>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800">Líder Macro</span>
+          </div>
+
+          <!-- 1. Política / Estrategia -->
+          <div class="info-subcard">
+            <span class="text-[9.5px] font-extrabold text-emerald-700 uppercase tracking-wider block">
+              1. POLÍTICA DE BIOECONOMÍA
+            </span>
+            <p class="text-xs font-bold text-slate-900">Política Nacional de Biocombustibles (RenovaBio)</p>
+            <p class="text-[11px] text-slate-600">Ley Federal N° 13.576 / Plan de Bioeconomía de la Amazonía.</p>
+          </div>
+
+          <!-- 2. Recurso Biológico -->
+          <div class="info-subcard">
+            <span class="text-[9.5px] font-extrabold text-emerald-700 uppercase tracking-wider block">
+              2. RECURSO BIOLÓGICO UTILIZADO
+            </span>
+            <p class="text-xs font-bold text-slate-900">Biomasa de caña de azúcar (sacarosa + bagazo) y soja</p>
+            <p class="text-[11px] text-slate-600">Recursos forestales no maderables amazónicos (açaí, andiroba).</p>
+          </div>
+
+          <!-- 3. Producto o Beneficio -->
+          <div class="info-subcard">
+            <span class="text-[9.5px] font-extrabold text-amber-700 uppercase tracking-wider block">
+              3. PRODUCTO / BENEFICIO OBTENIDO
+            </span>
+            <p class="text-xs font-bold text-slate-900">Bioetanol 2G, Polietileno Verde (I'm green™) y SAF</p>
+            <p class="text-[11px] text-slate-600">Combustible sostenible de aviación y bioelectricidad por cogeneración.</p>
+          </div>
+
+          <!-- 4. Sector de Aplicación -->
+          <div class="info-subcard">
+            <span class="text-[9.5px] font-extrabold text-indigo-700 uppercase tracking-wider block">
+              4. SECTOR DONDE SE APLICA
+            </span>
+            <p class="text-xs font-bold text-slate-900">Petroquímica Renovable, Transporte Terrestre y Aviación</p>
+            <p class="text-[11px] text-slate-600">Descarbonización a gran escala de matrices energéticas vehiculares.</p>
+          </div>
+
+          <!-- 5. Relación con la Sostenibilidad -->
+          <div class="info-subcard bg-emerald-50/60 border-emerald-100">
+            <span class="text-[9.5px] font-extrabold text-emerald-800 uppercase tracking-wider block">
+              5. RELACIÓN CON LA SOSTENIBILIDAD
+            </span>
+            <p class="text-[11px] text-slate-700 leading-snug">
+              Compensación certificada de emisiones con <strong>Créditos de Descarbonización (CBIOs)</strong>; valorización de la <strong>selva en pie</strong> y captura neta de CO2 en resinas 100% reciclables.
+            </p>
+          </div>
+        </div>
+
+        <!-- 6. Dos Imágenes con Fuentes y Enlaces Directos -->
+        <div class="pt-2 border-t border-slate-200 space-y-2">
+          <span class="text-[9.5px] font-bold text-slate-500 uppercase tracking-wider block">
+            EVIDENCIAS VISUALES (CLIC PARA AMPLIAR)
+          </span>
+
+          <div class="grid grid-cols-2 gap-2">
+            <!-- Img 1 -->
+            <div class="photo-frame group cursor-pointer" onclick="openLightbox('br_sugarcane')">
+              <img src="assets/br_sugarcane.jpg" alt="Caña de azúcar Brasil">
+              <div class="p-1 bg-white text-[9px] leading-tight">
+                <span class="font-bold text-slate-900 block truncate">Biorrefinería caña</span>
+                <span class="text-slate-500 block truncate">Embrapa Agroenergia</span>
+                <a href="https://www.embrapa.br/agroenergia" target="_blank" onclick="event.stopPropagation()" class="text-blue-600 underline font-medium block truncate hover:text-blue-800">
+                  🔗 embrapa.br
+                </a>
+              </div>
+            </div>
+
+            <!-- Img 2 -->
+            <div class="photo-frame group cursor-pointer" onclick="openLightbox('br_biopolymer')">
+              <img src="assets/br_biopolymer.jpg" alt="Polímero verde Brasil">
+              <div class="p-1 bg-white text-[9px] leading-tight">
+                <span class="font-bold text-slate-900 block truncate">Polietileno verde</span>
+                <span class="text-slate-500 block truncate">Braskem Global</span>
+                <a href="https://www.braskem.com.br/im-green" target="_blank" onclick="event.stopPropagation()" class="text-blue-600 underline font-medium block truncate hover:text-blue-800">
+                  🔗 braskem.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- PAÍS 3: COLOMBIA 🇨🇴                           -->
+      <!-- ============================================== -->
+      <section class="country-column p-3.5 border-t-4 border-t-purple-600">
+        <div>
+          <!-- Cabecera de País -->
+          <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-150">
+            <div class="flex items-center space-x-2">
+              <span class="text-2xl">🇨🇴</span>
+              <div>
+                <h3 class="text-sm font-black text-slate-900 uppercase tracking-wider">COLOMBIA</h3>
+                <span class="key-pill bg-purple-100 text-purple-800">Megadiversidad 2030</span>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800">Bioprospección</span>
+          </div>
+
+          <!-- 1. Política / Estrategia -->
+          <div class="info-subcard">
+            <span class="text-[9.5px] font-extrabold text-purple-700 uppercase tracking-wider block">
+              1. POLÍTICA DE BIOECONOMÍA
+            </span>
+            <p class="text-xs font-bold text-slate-900">Estrategia Nacional de Bioeconomía 2030</p>
+            <p class="text-[11px] text-slate-600">MinCiencias / CONPES 3934 (Crecimiento Verde).</p>
+          </div>
+
+          <!-- 2. Recurso Biológico -->
+          <div class="info-subcard">
+            <span class="text-[9.5px] font-extrabold text-emerald-700 uppercase tracking-wider block">
+              2. RECURSO BIOLÓGICO UTILIZADO
+            </span>
+            <p class="text-xs font-bold text-slate-900">Flora/hongos andino-amazónicos, café y almidón de yuca</p>
+            <p class="text-[11px] text-slate-600">Subproductos del beneficio cafetero (mucílago y pulpa).</p>
+          </div>
+
+          <!-- 3. Producto o Beneficio -->
+          <div class="info-subcard">
+            <span class="text-[9.5px] font-extrabold text-amber-700 uppercase tracking-wider block">
+              3. PRODUCTO / BENEFICIO OBTENIDO
+            </span>
+            <p class="text-xs font-bold text-slate-900">Extractos cosmecéuticos, bioempaques y bioplaguicidas</p>
+            <p class="text-[11px] text-slate-600">Fitomedicamentos botánicos y polímeros biodegradables.</p>
+          </div>
+
+          <!-- 4. Sector de Aplicación -->
+          <div class="info-subcard">
+            <span class="text-[9.5px] font-extrabold text-indigo-700 uppercase tracking-wider block">
+              4. SECTOR DONDE SE APLICA
+            </span>
+            <p class="text-xs font-bold text-slate-900">Salud, Cosmética Natural, Agroecología y Bionegocios</p>
+            <p class="text-[11px] text-slate-600">Emprendimientos comunitarios rurales de alto valor añadido.</p>
+          </div>
+
+          <!-- 5. Relación con la Sostenibilidad -->
+          <div class="info-subcard bg-emerald-50/60 border-emerald-100">
+            <span class="text-[9.5px] font-extrabold text-emerald-800 uppercase tracking-wider block">
+              5. RELACIÓN CON LA SOSTENIBILIDAD
+            </span>
+            <p class="text-[11px] text-slate-700 leading-snug">
+              Ruta hacia una <strong>economía pospetróleo</strong>. Incentiva ingresos sostenibles para comunidades rurales frenando la tala ilegal y sustituyendo agroquímicos sintéticos tóxicos.
+            </p>
+          </div>
+        </div>
+
+        <!-- 6. Dos Imágenes con Fuentes y Enlaces Directos -->
+        <div class="pt-2 border-t border-slate-200 space-y-2">
+          <span class="text-[9.5px] font-bold text-slate-500 uppercase tracking-wider block">
+            EVIDENCIAS VISUALES (CLIC PARA AMPLIAR)
+          </span>
+
+          <div class="grid grid-cols-2 gap-2">
+            <!-- Img 1 -->
+            <div class="photo-frame group cursor-pointer" onclick="openLightbox('co_biodiversity')">
+              <img src="assets/co_biodiversity.jpg" alt="Bioprospección Colombia">
+              <div class="p-1 bg-white text-[9px] leading-tight">
+                <span class="font-bold text-slate-900 block truncate">Bioprospección</span>
+                <span class="text-slate-500 block truncate">Inst. Humboldt</span>
+                <a href="https://www.humboldt.org.co" target="_blank" onclick="event.stopPropagation()" class="text-blue-600 underline font-medium block truncate hover:text-blue-800">
+                  🔗 humboldt.org.co
+                </a>
+              </div>
+            </div>
+
+            <!-- Img 2 -->
+            <div class="photo-frame group cursor-pointer" onclick="openLightbox('co_biopackaging')">
+              <img src="assets/co_biopackaging.jpg" alt="Bioempaques Colombia">
+              <div class="p-1 bg-white text-[9px] leading-tight">
+                <span class="font-bold text-slate-900 block truncate">Bioempaques</span>
+                <span class="text-slate-500 block truncate">MinCiencias / Agrosavia</span>
+                <a href="https://minciencias.gov.co/estrategia-bioeconomia" target="_blank" onclick="event.stopPropagation()" class="text-blue-600 underline font-medium block truncate hover:text-blue-800">
+                  🔗 minciencias.gov.co
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ============================================== -->
+    <!-- PIE DEL COLLAGE: CONCLUSIÓN COMPARATIVA BREVE   -->
+    <!-- ============================================== -->
+    <div class="mt-3 pt-2.5 border-t-2 border-slate-200 bg-slate-50 p-2.5 rounded-lg flex flex-col md:flex-row items-center justify-between gap-3">
+      <div class="flex items-start space-x-2.5 text-xs text-slate-700">
+        <span class="text-xl leading-none">💡</span>
+        <div>
+          <span class="font-bold text-slate-900 uppercase tracking-wide text-[11px] block">
+            CONCLUSIÓN COMPARATIVA (¿QUÉ ESTRATEGIA ES MÁS COMPLETA Y POR QUÉ?)
+          </span>
+          <p class="text-[11px] text-slate-600 leading-snug">
+            <strong>La estrategia de Costa Rica resulta la más completa e integral</strong> en formulación de política pública, pues articula la bioeconomía directamente como eje operativo de su <em>Plan Nacional de Descarbonización 2050</em> con gobernanza transversal interministerial (MICITT, MAG, MINAE, MEIC), integrando biodiversidad, economía circular, resolución de pasivos agrícolas y trazabilidad territorial, a diferencia de Brasil (orientada primordialmente a biocombustibles macroindustriales) y Colombia (centrada en bioprospección y biocomercio).
+          </p>
+        </div>
+      </div>
+
+      <div class="flex-shrink-0 text-right text-[10px] text-slate-500">
+        <span class="bg-white border border-slate-300 font-semibold px-2 py-1 rounded shadow-sm">
+          Fuentes Oficiales: CEPAL • IICA • MinCiencias • Embrapa
+        </span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- MODAL LIGHTBOX PARA INSPECCIONAR FOTOS EN ALTA RES       -->
+  <!-- ======================================================== -->
+  <div id="lightboxModal" class="hidden lightbox-modal" onclick="closeLightbox()">
+    <div class="bg-white rounded-xl shadow-2xl max-w-xl w-full p-5 border border-slate-300 relative text-slate-900" onclick="event.stopPropagation()">
+      
+      <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-200">
+        <h3 id="lightboxTitle" class="text-base font-bold text-slate-900">Evidencia Fotográfica</h3>
+        <button onclick="closeLightbox()" class="text-slate-400 hover:text-slate-600 font-bold text-lg">✕</button>
+      </div>
+
+      <div class="rounded-lg overflow-hidden bg-slate-900 h-64 mb-3 border border-slate-200">
+        <img id="lightboxImg" src="" alt="" class="w-full h-full object-cover">
+      </div>
+
+      <p id="lightboxDesc" class="text-xs text-slate-700 mb-3 leading-relaxed"></p>
+
+      <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 text-xs">
+        <span class="text-slate-500 font-bold block text-[10px] uppercase">Fuente Institucional Directa:</span>
+        <span id="lightboxSource" class="font-semibold text-slate-900 block"></span>
+        <a id="lightboxLink" href="" target="_blank" class="text-blue-600 underline text-[11px] truncate block mt-0.5"></a>
+      </div>
+
+      <div class="mt-4 flex justify-end">
+        <button onclick="closeLightbox()" class="px-4 py-1.5 bg-slate-800 text-white font-semibold text-xs rounded-lg hover:bg-slate-700">
+          Cerrar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL DE FUENTES CONSULTADAS FORMALES (APA 7)           -->
+  <!-- ======================================================== -->
+  <div id="sourcesModal" class="hidden lightbox-modal" onclick="closeSourcesModal()">
+    <div class="bg-white rounded-xl shadow-2xl max-w-2xl w-full p-6 border border-slate-300 relative text-slate-900 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+      
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
+        <div>
+          <span class="text-[10px] font-extrabold uppercase bg-red-100 text-red-800 px-2 py-0.5 rounded">Rúbrica UVM</span>
+          <h3 class="text-lg font-black text-slate-900 mt-1">Fuentes Consultadas (Normas APA 7ª Edición)</h3>
+          <p class="text-xs text-slate-500">Organismos internacionales y páginas gubernamentales (sin enlaces genéricos a Google).</p>
+        </div>
+        <button onclick="closeSourcesModal()" class="text-slate-400 hover:text-slate-600 font-bold text-lg">✕</button>
+      </div>
+
+      <div id="copySuccessAlert" class="hidden mb-3 p-2 bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs rounded-lg font-bold flex items-center">
+        ✓ ¡Referencias copiadas exitosamente al portapapeles!
+      </div>
+
+      <div class="space-y-3 text-xs text-slate-700 leading-relaxed mb-5">
+        <div class="p-2.5 bg-slate-50 rounded border border-slate-200">
+          <p class="font-bold text-slate-900">1. CEPAL & IICA. (2020).</p>
+          <p class="italic text-slate-700">La bioeconomía en América Latina y el Caribe: Políticas, oportunidades y desarrollo sostenible.</p>
+          <a href="https://www.cepal.org/es/publicaciones/45942-la-bioeconomia-america-latina-caribe" target="_blank" class="text-blue-600 underline block mt-0.5">
+            🔗 https://www.cepal.org/es/publicaciones/45942-la-bioeconomia-america-latina-caribe
+          </a>
+        </div>
+
+        <div class="p-2.5 bg-slate-50 rounded border border-slate-200">
+          <p class="font-bold text-slate-900">2. MICITT, MINAE & MAG. (2020).</p>
+          <p class="italic text-slate-700">Estrategia Nacional de Bioeconomía Costa Rica 2020-2030 (Decreto Ejecutivo N° 42475).</p>
+          <a href="https://www.micitt.go.cr/bioeconomia" target="_blank" class="text-blue-600 underline block mt-0.5">
+            🔗 https://www.micitt.go.cr/bioeconomia
+          </a>
+        </div>
+
+        <div class="p-2.5 bg-slate-50 rounded border border-slate-200">
+          <p class="font-bold text-slate-900">3. Embrapa Agroenergia. (2022).</p>
+          <p class="italic text-slate-700">O papel da bioeconomia e a cana-de-açúcar no RenovaBio e na transição energética brasileira.</p>
+          <a href="https://www.embrapa.br/agroenergia" target="_blank" class="text-blue-600 underline block mt-0.5">
+            🔗 https://www.embrapa.br/agroenergia
+          </a>
+        </div>
+
+        <div class="p-2.5 bg-slate-50 rounded border border-slate-200">
+          <p class="font-bold text-slate-900">4. Braskem Global S.A. (2023).</p>
+          <p class="italic text-slate-700">Produção de Polietileno Renovável 'I'm green™' a partir do etanol da cana: Ciclo de vida e economia circular.</p>
+          <a href="https://www.braskem.com.br/im-green" target="_blank" class="text-blue-600 underline block mt-0.5">
+            🔗 https://www.braskem.com.br/im-green
+          </a>
+        </div>
+
+        <div class="p-2.5 bg-slate-50 rounded border border-slate-200">
+          <p class="font-bold text-slate-900">5. MinCiencias Colombia. (2020).</p>
+          <p class="italic text-slate-700">Estrategia Nacional de Bioeconomía de Colombia: Hacia una economía intensiva en conocimiento a 2030.</p>
+          <a href="https://minciencias.gov.co/estrategia-bioeconomia" target="_blank" class="text-blue-600 underline block mt-0.5">
+            🔗 https://minciencias.gov.co/estrategia-bioeconomia
+          </a>
+        </div>
+
+        <div class="p-2.5 bg-slate-50 rounded border border-slate-200">
+          <p class="font-bold text-slate-900">6. Instituto de Investigación de Recursos Biológicos Alexander von Humboldt. (2022).</p>
+          <p class="italic text-slate-700">Bioprospección y bioeconomía: Potencial de la megadiversidad botánica y biológica en Colombia.</p>
+          <a href="https://www.humboldt.org.co" target="_blank" class="text-blue-600 underline block mt-0.5">
+            🔗 https://www.humboldt.org.co
+          </a>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end space-x-2 pt-3 border-t border-slate-200">
+        <button onclick="closeSourcesModal()" class="px-4 py-1.5 border border-slate-300 text-slate-700 font-semibold text-xs rounded-lg hover:bg-slate-50">
+          Cerrar
+        </button>
+        <button onclick="copyAPAReferences()" class="px-4 py-1.5 bg-red-700 hover:bg-red-600 text-white font-bold text-xs rounded-lg shadow">
+          Copiar Todas las Referencias
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Pie Discreto Institucional -->
+  <footer class="mt-4 text-xs text-slate-400 text-center no-print">
+    UVM • Práctica #9 • Momento 1: Collage Digital de Bioeconomía • Estudiante: <strong>Christian Johan Hernández Hernández</strong>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
